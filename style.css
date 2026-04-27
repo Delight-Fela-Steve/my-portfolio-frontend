@@ -335,3 +335,139 @@ nav {
         gap: 1.25rem 0.75rem;
     }
 }
+
+/* ─── Section 4: My Projects ───────────────────────────────────────────────── */
+.projects {
+    background-color: var(--bg-dark);
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2.5rem;
+}
+
+.projects-heading {
+    color: var(--text-light);
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.project-card--reverse {
+    flex-direction: row-reverse;
+}
+
+.project-img-wrap {
+    flex: 0 0 48%;
+}
+
+.project-img-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.project-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-name {
+    font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+    font-weight: 700;
+    color: var(--text-light);
+    line-height: 1.2;
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.project-company {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent-green);
+    background-color: rgba(93, 189, 122, 0.12);
+    padding: 0.2rem 0.625rem;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+}
+
+.project-desc {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    max-width: 30rem;
+}
+
+.project-ctas {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-project {
+    padding: 0.625rem 1.375rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    color: var(--text-light);
+    transition: background-color 0.2s ease;
+}
+
+.btn-project:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 48em) {
+    .projects-container {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .projects-list {
+        gap: 3.5rem;
+    }
+
+    .project-card,
+    .project-card--reverse {
+        flex-direction: column;
+    }
+
+    .project-img-wrap {
+        flex: unset;
+        width: 100%;
+    }
+}
