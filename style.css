@@ -227,3 +227,111 @@ nav {
         padding: 2.5rem 0;
     }
 }
+
+/* ─── Section 3: Technology Stacks ─────────────────────────────────────────── */
+.tech-stacks {
+    background-color: var(--bg-light);
+}
+
+.tech-stacks-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2.5rem;
+}
+
+.section-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.tech-stacks-body {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.tech-stacks-left {
+    flex: 1;
+}
+
+.tech-stacks-desc {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: rgba(20, 20, 20, 0.6);
+    max-width: 28rem;
+}
+
+.tech-stacks-right {
+    flex: 0 0 46%;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem 1rem;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.tech-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+}
+
+.tech-icon--fa {
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #FF9900;
+}
+
+.tech-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+@media (max-width: 48em) {
+    .tech-stacks-container {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .section-heading {
+        margin-bottom: 2.5rem;
+    }
+
+    .tech-stacks-body {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .tech-stacks-left {
+        width: 100%;
+    }
+
+    .tech-stacks-desc {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .tech-stacks-right {
+        flex: unset;
+        width: 100%;
+    }
+
+    .tech-grid {
+        gap: 1.25rem 0.75rem;
+    }
+}
