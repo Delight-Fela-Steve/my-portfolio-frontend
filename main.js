@@ -1,3 +1,21 @@
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('header .nav-links');
+const menuIcon = hamburger.querySelector('i');
+
+hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    menuIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+        menuIcon.className = 'fa-solid fa-bars';
+    });
+});
+
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
