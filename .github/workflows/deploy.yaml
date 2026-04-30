@@ -34,7 +34,8 @@ jobs:
                   rm -rf public
                   mkdir -p public/assets
 
-                  rsync -av index.html style.css main.js assets/ public/
+                  rsync -av assets/ public/assets/
+                  cp index.html style.css main.js public
 
             - name: Sync With S3
               run: |
