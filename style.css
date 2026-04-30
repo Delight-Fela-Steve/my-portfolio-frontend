@@ -819,3 +819,43 @@ nav {
         width: 100%;
     }
 }
+
+/* ─── Footer ────────────────────────────────────────────────────────────────── */
+.site-footer {
+    background-color: var(--bg-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    height: var(--nav-height);
+}
+
+@media (max-width: 48em) {
+    .footer-inner {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-inner .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem 1.5rem;
+    }
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    padding-bottom: 1rem;
+}
