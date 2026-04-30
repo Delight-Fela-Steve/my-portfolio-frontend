@@ -1,0 +1,48 @@
+name: Deploy to AWS CloudFront
+
+on:
+    push:
+        branches:
+            - main
+
+    workflow_dispatch:
+
+permissions:
+    id-token: write
+    contents: read
+
+jobs:
+
+    deploy:
+        name: Deploy to Cloudfront (Production)
+        runs-on: ubuntu-latest
+        environment: production
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v5
+
+            - name: Configure AWS Credentials
+              uses: aws-actions/configure-aws-credentials@v6.1.0
+              with:
+                  role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
+                  aws-region: ${{ vars.AWS_REGION }}
+
+            - name: Prepare build folder
+              run: |
+                  set -e
+                  rm -rf public
+                  mkdir -p public/assets
+
+                  rsync -av index.html style.css main.js assets/ public/assets/
+
+            - name: Sync With S3
+              run: |
+                  aws s3 sync ./public/ s3://${{ vars.S3_BUCKET }}/${{ vars.WEBSITE_FOLDER }}/ \
+                  --delete
+
+            - name: Invalidate Cloudfront Cache
+              run: |
+                  aws cloudfront create-invalidation \
+                  --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} \
+                  --paths "/index.html"
