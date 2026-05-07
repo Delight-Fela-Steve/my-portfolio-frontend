@@ -87,6 +87,23 @@ nav {
     flex-shrink: 0;
 }
 
+/* Nav socials */
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 1.125rem;
+}
+
+.nav-socials a {
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.nav-socials a:hover {
+    color: var(--text-light);
+}
+
 /* Nav links */
 .nav-links {
     display: flex;
