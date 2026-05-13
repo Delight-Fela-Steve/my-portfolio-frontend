@@ -997,7 +997,7 @@ button.btn-project {
     background: rgba(0, 0, 0, 0.78);
     z-index: 400;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 1.5rem;
     overflow-y: auto;
@@ -1011,6 +1011,7 @@ button.btn-project {
     position: relative;
     width: 100%;
     max-width: 720px;
+    margin: auto;
     background: var(--bg-dark);
     border: 1px solid var(--surface-dark-08);
     border-radius: 8px;
@@ -1042,6 +1043,21 @@ button.btn-project {
     background-color: var(--surface-dark-08);
 }
 
+.modal-header-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.modal-eyebrow {
+    font-size: var(--dfs-text-xs);
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
 .modal-tag {
     display: inline-block;
     font-size: var(--dfs-text-2xs);
@@ -1051,7 +1067,7 @@ button.btn-project {
     padding: 0.2rem 0.625rem;
     border-radius: 999px;
     letter-spacing: 0.02em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
 }
 
 .modal-title {
