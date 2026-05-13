@@ -152,18 +152,17 @@
                         <div class="project-img-placeholder"></div>
                     </div>
                     <div class="project-info">
-                        <h3 class="project-name">Project Name</h3>
+                        <h3 class="project-name">Zeeh Africa</h3>
                         <div class="project-meta">
-                            <span class="project-company">Company / Client</span>
-                            <span class="project-tag">Web App</span>
+                            <span class="project-company">Open-finance API platform &mdash; 2023&ndash;present</span>
+                            <span class="project-tag">API</span>
                         </div>
                         <p class="project-desc">
-                            Short description of what the project does, the problem it solves,
-                            and any notable technical challenges addressed.
+                            Multi-provider open-finance API giving fintechs verified access to bank
+                            and institution data across Africa through a single integration layer.
                         </p>
                         <div class="project-ctas">
-                            <a href="#" class="btn-project">View Project ↗</a>
-                            <a href="#" class="btn-project">View on GitHub</a>
+                            <button class="btn-project" data-project="zeeh">View Use Case &#8599;</button>
                         </div>
                     </div>
                 </div>
@@ -174,18 +173,17 @@
                         <div class="project-img-placeholder"></div>
                     </div>
                     <div class="project-info">
-                        <h3 class="project-name">Project Name</h3>
+                        <h3 class="project-name">Konectin</h3>
                         <div class="project-meta">
-                            <span class="project-company">Company / Client</span>
-                            <span class="project-tag">API</span>
+                            <span class="project-company">AI resume &amp; cover letter generator &mdash; 2022&ndash;2023</span>
+                            <span class="project-tag">Web App</span>
                         </div>
                         <p class="project-desc">
-                            Short description of what the project does, the problem it solves,
-                            and any notable technical challenges addressed.
+                            Backend for an AI-driven r&eacute;sum&eacute; and cover-letter generator &mdash; auth,
+                            payments, PDF/DOCX generation, and a CI/CD pipeline that cut deploy time by up to 80%.
                         </p>
                         <div class="project-ctas">
-                            <a href="#" class="btn-project">View Project ↗</a>
-                            <a href="#" class="btn-project">View on GitHub</a>
+                            <button class="btn-project" data-project="konectin">View Use Case &#8599;</button>
                         </div>
                     </div>
                 </div>
@@ -196,18 +194,17 @@
                         <div class="project-img-placeholder"></div>
                     </div>
                     <div class="project-info">
-                        <h3 class="project-name">Project Name</h3>
+                        <h3 class="project-name">A1School</h3>
                         <div class="project-meta">
-                            <span class="project-company">Company / Client</span>
-                            <span class="project-tag">Backend</span>
+                            <span class="project-company">Online courses marketplace &mdash; 2023</span>
+                            <span class="project-tag">DevOps</span>
                         </div>
                         <p class="project-desc">
-                            Short description of what the project does, the problem it solves,
-                            and any notable technical challenges addressed.
+                            Backend and DevOps pipeline for a Nigerian Udemy-style marketplace &mdash;
+                            Dockerised, semantically versioned, with admin tooling for moderating instructors at scale.
                         </p>
                         <div class="project-ctas">
-                            <a href="#" class="btn-project">View Project ↗</a>
-                            <a href="#" class="btn-project">View on GitHub</a>
+                            <button class="btn-project" data-project="a1school">View Use Case &#8599;</button>
                         </div>
                     </div>
                 </div>
@@ -218,18 +215,17 @@
                         <div class="project-img-placeholder"></div>
                     </div>
                     <div class="project-info">
-                        <h3 class="project-name">Project Name</h3>
+                        <h3 class="project-name">Moto Zero</h3>
                         <div class="project-meta">
-                            <span class="project-company">Company / Client</span>
-                            <span class="project-tag">DevOps</span>
+                            <span class="project-company">Carbon emissions routing &mdash; 2024</span>
+                            <span class="project-tag">Backend</span>
                         </div>
                         <p class="project-desc">
-                            Short description of what the project does, the problem it solves,
-                            and any notable technical challenges addressed.
+                            Routing engine that finds the lowest-carbon path between any two points on earth &mdash;
+                            optimisation rewritten end-to-end for a 50% speed improvement.
                         </p>
                         <div class="project-ctas">
-                            <a href="#" class="btn-project">View Project ↗</a>
-                            <a href="#" class="btn-project">View on GitHub</a>
+                            <button class="btn-project" data-project="motoz">View Use Case &#8599;</button>
                         </div>
                     </div>
                 </div>
@@ -386,6 +382,26 @@
         </div>
         <p class="footer-copy">&copy; Delight Fela-Steve 2026</p>
     </footer>
+
+    <!-- ─── Case Study Modal ─────────────────────────────────────────────── -->
+    <div class="modal-backdrop" id="caseStudyModal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-dialog">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <span class="modal-tag" id="modalTag"></span>
+            <h2 class="modal-title" id="modalTitle"></h2>
+            <p class="modal-company" id="modalCompany"></p>
+            <p class="modal-summary" id="modalSummary"></p>
+            <div class="modal-tech-list" id="modalTechList"></div>
+            <h3 class="modal-section-title">Problem</h3>
+            <p class="modal-summary" id="modalProblem"></p>
+            <h3 class="modal-section-title">Approach</h3>
+            <ul class="modal-list" id="modalApproach"></ul>
+            <h3 class="modal-section-title">Outcome</h3>
+            <ul class="modal-list" id="modalOutcome"></ul>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 
