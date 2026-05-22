@@ -32,10 +32,15 @@ jobs:
               run: |
                   set -e
                   rm -rf public
-                  mkdir -p public/assets
+                  mkdir -p public
 
-                  rsync -av assets/ public/assets/
-                  cp index.html style.css main.js public
+                  rsync -av \
+                    --exclude='.github/' \
+                    --exclude='.gitignore' \
+                    --exclude='.claude/' \
+                    --exclude='.git/' \
+                    --exclude='public/' \
+                    ./ public/
 
             - name: Sync With S3
               run: |
